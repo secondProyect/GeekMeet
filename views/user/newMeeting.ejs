@@ -20,7 +20,7 @@
 
         <div class="input-container blue-grey-text text-darken-3 blue-grey-text text-darken-3">
           <label for="game">Juego:</label>
-          <select name="game blue-grey lighten-3">
+          <select name="game" class="blue-grey lighten-3">
             <% listgames.forEach((e) => { %>
               <option value="<%= e.name %>"><%= e.name %> - Máximo número de jugadores: <%= e.maxPlayers %></option>
             <%})%>

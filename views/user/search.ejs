@@ -13,7 +13,6 @@
 <h1>Busca tu partida!</h1>
 <form action="/search" method="post">
 <div class="filter-fields-container">
-
 <div class="filter-item">
   <label for="game">Juego</label>
   <select name="game" id="filterName" class='filter-field'>
@@ -23,20 +22,14 @@
     </select>
 </div>
 <div class="filter-item">
-
   <label for="host">Usuario</label>
   <input type="text" name="host" class='filter-field'>
-
 </div>
 <div class="filter-item">
   <label for="date">Fecha</label>
   <input type="date" name="date" class='filter-field'>
-
 </div>
-
-
 <button type="submit" class='z-depth-3'>Aplica los filtros</button>
-
 </div>
 </form>
 <h2>Partidas disponibles:</h2>
@@ -68,6 +61,6 @@
 <%})%>
 </ul>
 </div>
-<a href="/userProfile">Volver a tu perfil</a>
+<a class="listapartidas grey-text text-darken-4" href="/userProfile">Volver a tu perfil</a>
 </div>
 </div>

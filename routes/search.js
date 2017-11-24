@@ -61,6 +61,7 @@ if(filterUser == "" && filterDate == ""){
 }if(filterUser !== "" && filterDate !== ""){
   filter = {game: filterName, 'host.host_name': filterUser, date: { $gt: new Date(filterDate)}};
 }
+
 Event.find(filter).sort({date: -1}).exec((err, listevents) => {
     if (err) { return next(err); }
     listevents.forEach(event => {

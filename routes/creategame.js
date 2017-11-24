@@ -19,7 +19,7 @@ router.get('/newMeeting', ensureLoggedIn(), (req, res, next)  => {
 
 router.post('/newMeeting', (req, res, next) => {
 
-
+  console.log(req.body)
   const newEvent = {
     name: req.body.name,
     game : req.body.game,

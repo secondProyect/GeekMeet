@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/geekmeet', {useMongoClient: true});
+mongoose.connect("mongodb://admin:1234@ds019478.mlab.com:19478/geekmeet"
+, {useMongoClient: true});
 const Game = require('../models/Game');
 
 const games = [
