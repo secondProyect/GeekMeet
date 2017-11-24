@@ -1,0 +1,73 @@
+<nav class="card-panel blue-grey top-bar">
+    <div class="col s6 header-left">
+      <img src="https://res.cloudinary.com/ddsc9zpq3/image/upload/v1511453634/yellow_ytm6qm.png" alt="">
+    </div>
+    <div class="col s6 header-right">
+      <a href="/games">Guía Juegos</a>
+      <a href="">|</a>
+      <a href="/logout">Logout</a>
+    </div>
+</nav>
+<div class="background4">
+<div class="wrapper-profile">
+<h1>Busca tu partida!</h1>
+<form action="/search" method="post">
+<div class="filter-fields-container">
+
+<div class="filter-item">
+  <label for="game">Juego</label>
+  <select name="game" id="filterName" class='filter-field'>
+    <% listgames.forEach((a) => { %>
+      <option value="<%= a.name %>"><%= a.name %></option>
+      <%})%>
+    </select>
+</div>
+<div class="filter-item">
+
+  <label for="host">Usuario</label>
+  <input type="text" name="host" class='filter-field'>
+
+</div>
+<div class="filter-item">
+  <label for="date">Fecha</label>
+  <input type="date" name="date" class='filter-field'>
+
+</div>
+
+
+<button type="submit" class='z-depth-3'>Aplica los filtros</button>
+
+</div>
+</form>
+<h2>Partidas disponibles:</h2>
+<div class="z-depth-3 partida-container2 grey-text text-darken-4">
+<ul>
+<% listevents.forEach((e) => { %>
+  <div class="gamelist1">
+  <div class="gamelist">
+  <div class="gamelist">
+  <p class="listapartidas"> <%= e.name %> </p>
+  <p class="listapartidas1"> Status: <%= e.status %> | Numero de jugadores: <%= e.participants %>/<%= e.maxPlayers %></p>
+  <a href="/search/<%= e._id %>" class=" game-details grey-text text-lighten-1">Ver detalles de la Partida</a>
+  <% if (''+e.host.host_id == ''+user._id) {%>
+    <a href='edit/<%=e._id%>' class="brown-text text-lighten-1">Editar</a>
+    <%} else if(eventsjoined.indexOf(''+e._id) !== -1) {%>
+    <form action="/unjoin-event" method="post">
+      <input type="text" name="eventId" value='<%=e._id%>' style="display:none">
+      <button type="submit" class="btn right-align grey grey lighten-3 grey-text">Desapuntarme de la partida</button>
+    </form>
+  <%} else {%>
+  <form action="/join-event" method="post">
+    <input type="text" name="eventId" value='<%=e._id%>' style="display:none">
+    <button type="submit" class="btn grey grey lighten-3 grey-text">Unete a la partida</button>
+  </form>
+  <%}%>
+</div>
+</div>
+</div>
+<%})%>
+</ul>
+</div>
+<a href="/userProfile">Volver a tu perfil</a>
+</div>
+</div>

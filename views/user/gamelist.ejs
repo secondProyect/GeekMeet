@@ -1,0 +1,43 @@
+<nav class="card-panel blue-grey top-bar">
+  <div class="col s6 header-left">
+    <img src="https://res.cloudinary.com/ddsc9zpq3/image/upload/v1511453634/yellow_ytm6qm.png" alt="">
+  </div>
+  <div class="col s6 header-right">
+    <a href="/games">Guía Juegos</a>
+    <a href="">|</a>
+    <a href="/logout">Logout</a>
+  </div>
+</nav>
+<div class="formGameList   blue-grey lighten-3">
+<div class="row">
+  <div class="col s12 center-align">
+    <h1>Juegos disponibles</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col s2 left-align">
+  </div>
+  <div class="col s8 left-align">
+    <% listgames.forEach((e) => { %>
+      <br>
+      <h4 class="indigo-text text-darken-2"><b> <%= e.name %> </b></h5>
+      <li><span class=""><b>Descripción</b></span>:
+        <%= e.description %>
+      </li>
+      <li><span class=""><b>Máximo número de jugadores</b></span>:
+        <%= e.maxPlayers %>
+      </li>
+      <br>
+      <%})%>
+  </div>
+  <div class="col s2 left-align">
+  </div>
+</div>
+<div class="row">
+  <div class="col s4">
+  </div>
+  <div class="col s6">
+<a href="/userProfile" class="waves-effect waves-light btn indigo darken-2" style= " margin-top:30px; margin-left:30px; margin-bottom:50px;">Volver a tu pagina</a>
+</div>
+</div>
+</div>

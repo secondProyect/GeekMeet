@@ -1,0 +1,423 @@
+/* index    */
+
+body {
+  font-family: 'Audiowide', sans-serif;
+  font-weight: bolder;
+  color: #eceff1;
+}
+.gamelist{
+  margin: 10px;
+}
+
+.listapartidas{
+  font-size:  2rem;
+  color: #455a64;
+  margin: 5px;
+}
+
+.listapartidas1{
+  font-size:  1.2rem;
+  color: #455a64;
+  margin: 5px;
+}
+
+.gamelist1{
+  border-radius: 3px;
+  background-color: #9a9588
+}
+
+.link{
+  margin-top: 50px;
+  padding-top: 20px;
+  text-decoration: none;
+  color: #37474f;
+  font-family: "Audiowide",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size:  2.3rem;
+}
+.float{
+  float: right;
+}
+
+a {
+  color: #00B7FF;
+  line-height: 70px;
+}
+.purplelink{
+  color: #534288;
+}
+.show{
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+.buttonmargin{
+  margin-top: 10px;
+}
+.mtshow{
+  flex-basis: 45%;
+  margin-top: 150px;
+  padding: 2% 5%;
+  background-color: #716c6cad;
+  border-radius: 3px;
+}
+.background{
+  background-image: url('http://res.cloudinary.com/ddsc9zpq3/image/upload/v1511476638/thumb-1920-435692_r2dtu5.png');
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.background2{
+  background-image: url('http://res.cloudinary.com/ddsc9zpq3/image/upload/v1511465058/fondo50_svi8ej.jpg');
+  height: 190%;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+}
+
+.background3{
+  background-image: url('http://res.cloudinary.com/ddsc9zpq3/image/upload/v1511465058/fondo50_svi8ej.jpg');
+  background-size: cover;
+  height: 1200px;
+  width: 100%;
+  position: absolute;
+}
+
+.background4{
+  background-image: url('http://res.cloudinary.com/ddsc9zpq3/image/upload/v1511478711/Magic-The-Gathering-Wallpaper-021_dvaeyl.jpg');
+  background-size: cover;
+  height: auto;
+  width: 100%;
+  position: absolute;
+
+}
+
+.index-title{
+  font-size: 30px;
+}
+
+.logo{
+  width: 200px;
+  height: 200px;
+}
+#titre{
+	margin : 0 auto;
+  font-size:150px;
+	font-family: "Audiowide",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+	color:white;
+	text-shadow: -1px 0 1px #582E00,
+             	1px 0 1px #582E00,
+             	0 -1px 1px #582E00,
+             	0 4px 1px #582E00,
+             	-2px 4px 1px #582E00,
+             	2px 3px 2px #582E00;
+}
+
+
+.couche1{
+	position: relative;
+	-webkit-border-radius: 11px;
+	-moz-border-radius: 11px;
+	border-radius: 11px;
+	width:300px;
+	height:100px;
+	background:black;
+	-webkit-box-shadow: 0px 11px 2px #301C09;
+    -moz-box-shadow: 0px 11px 2px #301C09;
+    box-shadow: 0px 11px 2px #301C09;
+    cursor:pointer;
+    margin : 20px auto;
+
+
+}
+
+.couche2{
+	position:absolute;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	width:294px;
+	height:94px;
+	margin-top:3px;
+	margin-left:3px;
+	background:#78909c;
+	-webkit-box-shadow: 0px 9px 0px #37474f;
+    -moz-box-shadow: 0px 9px 0px #37474f;
+    box-shadow: 0px 9px 0px #37474f;
+
+}
+
+.couche23{
+	position:absolute;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	width:292px;
+	height:80px;
+	margin-top:5px;
+	margin-left:1px;
+    -webkit-box-shadow: 0px -4px 5px 0px #607d8b;
+    -moz-box-shadow:    0px -4px 5px 0px #607d8b;
+	box-shadow:         0px -4px 5px 0px #607d8b;
+
+
+}
+
+.couche3{
+	position:absolute;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	margin-top:0px;
+	margin-left:5px;
+	width:281px;
+	height:82px;
+	background:#90a4ae;
+	-webkit-box-shadow: 0px 4px 3px 0px #546e7a;
+	-moz-box-shadow:    0px 4px 3px 0px #546e7a;
+	box-shadow:         0px 4px 3px 0px #546e7a;
+
+}
+
+
+/*effects*/
+.couche1:active{
+	width:280px;
+	height:95px;
+}
+
+.couche1:active .couche2{
+	width:274px;
+	height:89px;
+}
+
+.couche1:active .couche23{
+	width:272px;
+	height:75px;
+}
+
+.couche1:active .couche3{
+	width:261px;
+	height:77px;
+}
+
+.couche1:active .couche4{
+	width:255px;
+	height:32px;
+}
+
+.couche1:active .couche5{
+	width:6px;
+	height:8px;
+	margin-left:248px;
+}
+
+.couche1:active .battle{
+	margin-top:-3px;
+	margin-left:75px;
+}
+
+
+
+/*red*/
+
+
+#red2{
+	background:#FC3632;
+	-webkit-box-shadow: 0px 9px 0px #9C1814;
+    -moz-box-shadow: 0px 9px 0px #9C1814;
+    box-shadow: 0px 9px 0px #9C1814;
+
+}
+
+#red23{
+	-webkit-box-shadow: 0px -4px 5px 0px #FE5970;
+    -moz-box-shadow:    0px -4px 5px 0px #FE5970;
+	box-shadow:         0px -4px 5px 0px #FE5970;
+
+}
+
+#red3{
+	background:#FC4262;
+	-webkit-box-shadow: 0px 4px 3px 0px #E42625;
+	-moz-box-shadow:    0px 4px 3px 0px #E42625;
+	box-shadow:         0px 4px 3px 0px #E42625;
+
+}
+
+#red4{
+	background:#FF6666;
+
+}
+
+#red5{
+	background:#FFC8C8;
+
+
+}
+
+#battle_red{
+	text-shadow: -1px 0 1px #990000,
+             	1px 0 1px #990000,
+             	0 -1px 1px #990000,
+             	0 4px 1px #990000,
+             	-2px 4px 1px #990000,
+             	2px 3px 2px #990000;
+    color:#FFFFCC;
+}
+
+/* index    */
+
+.form-container {
+  background-image: url('http://res.cloudinary.com/ddsc9zpq3/image/upload/v1511476638/thumb-1920-435692_r2dtu5.png');
+  height: 100vh;
+  width: 100%;
+  padding-top: 20vh;
+}
+
+select {
+       display: inherit;
+       background-color: transparent;
+       border-color: #37474f ;
+     }
+
+ .input-container {
+       margin-bottom: 15px;
+  }
+
+.r {
+  width: 50%;
+  padding: 12vh 6%;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+input {
+  padding: 0 10px;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0px 9999px rgba(255,255,255,1) !important;
+}
+input:-webkit-autofill:focus {
+    -webkit-box-shadow:0 0 0 50px rgba(255,255,255,1) inset !important;
+}
+
+.card-panel {
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 8.5vh;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.col.s6.header-left {
+  text-align: left;
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.col.s6.header-left img {
+  width: 10%;
+  line-height: 8vh;
+}
+
+.col.s6.header-right a {
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+.wrapper-profile {
+  padding: 2vh 10%;
+}
+
+.options-profile a {
+  font-size: 1.3rem;
+  font-weight: 200;
+  color: rgba(44,44,44,0.7);
+  margin-right: 10px;
+}
+
+.partidas-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.partida-container {
+  flex-basis: 45%;
+  margin: 20px 20px;
+  padding: 2% 5%;
+  background-color: #716c6cad;
+  border-radius: 3px;
+}
+
+.created {
+  background-color: #263238;
+}
+
+.partida-container2 {
+  flex-basis: 45%;
+  margin: 20px 20px;
+  padding: 2% 5%;
+  background-color: #79776ec4;
+  border-radius: 10px;
+}
+
+.partida-container .game-name {
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.r label{
+  font-size: 23px;
+}
+
+.formNewMeeting{
+  margin: 60px 200px;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 3%;
+  border-radius: 10px;
+}
+.formNewMeeting label{
+  color: black;
+  font-size: 20px;
+}
+.formGameList{
+  font-size: 17px;
+  color: black;
+}
+input {
+  padding: 0 10px;
+  background-color: transparent;
+}
+
+.filter-fields-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-item {
+  flex-basis: 25%;
+}
+
+.filter-fields-container button {
+  background-color: #78909c;
+  border-radius: 5px;
+  height: 45px;
+}

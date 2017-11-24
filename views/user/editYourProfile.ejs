@@ -1,0 +1,20 @@
+
+<div class="">
+  <div class="">
+      <form action="/edit-your-profile/<%= user._id %>" method="post">
+        <div class="">
+          <label for="username">Usuario</label>
+          <input type="text" name="username" class="" value="<%= user.username %>">
+        </div>
+        <div class="">
+          <label for="email">Email</label>
+          <input type="text" name="email" class="" value="<%= user.email %>">
+        </div>
+        <div class="">
+          <label for="city">Ciudad de residencia:</label>
+          <input  type="text" name="city" class="" value="<%= user.city %>"></input>
+        </div>
+        <button type="submit" class="">Actualizar perfil</button>
+      </form>
+  </div>
+</div>

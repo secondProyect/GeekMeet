@@ -1,0 +1,82 @@
+<nav class="card-panel blue-grey top-bar">
+    <div class="col s6 header-left">
+      <img src="https://res.cloudinary.com/ddsc9zpq3/image/upload/v1511453634/yellow_ytm6qm.png" alt="">
+    </div>
+    <div class="col s6 header-right">
+      <a href="/games">Guía Juegos</a>
+      <a href="">|</a>
+      <a href="/logout">Logout</a>
+    </div>
+</nav>
+</nav>
+  <div class="background2">
+
+      <form action="/newMeeting" method="post" class="formNewMeeting">
+
+        <div class="input-container blue-grey-text text-darken-3 blue-grey-text text-darken-3">
+          <label for="name">Nombre de la partida:</label>
+          <input type="text" name="name" class="">
+        </div>
+
+        <div class="input-container blue-grey-text text-darken-3 blue-grey-text text-darken-3">
+          <label for="game">Juego:</label>
+          <select name="game blue-grey lighten-3">
+            <% listgames.forEach((e) => { %>
+              <option value="<%= e.name %>"><%= e.name %> - Máximo número de jugadores: <%= e.maxPlayers %></option>
+            <%})%>
+          </select>
+        </div>
+
+        <div class="input-container blue-grey-text text-darken-3">
+          <label for="city">Ciudad:</label>
+          <input type="text" name="city" class="">
+        </div>
+
+        <div class="input-container blue-grey-text text-darken-3">
+          <label for="adress">Dirección:</label>
+          <input  type="text" name="adress" class=""></input>
+        </div>
+
+        <div class="input-container blue-grey-text text-darken-3">
+          <label for="date">Fecha:</label>
+          <input  type="datetime-local" name="date" class=""></input>
+        </div>
+
+        <div class="input-container blue-grey-text text-darken-3">
+          <label for="expertiseLevel">Nivel de dificultad:</label>
+          <select name="expertiseLevel">
+              <option value="Open to anyone">Open to anyone</option>
+              <option value="+2 games played">+2 games played</option>
+              <option value="+10 games played">+10 games played</option>
+              <option value="+50 games">+50 games</option>
+          </select>
+        </div>
+
+        <div class="input-container blue-grey-text text-darken-3">
+          <label for="maxPlayers">Máximo número de jugadores(difernte al reglamentario):</label>
+          <input  type="number" name="maxPlayers" class="" ></input>
+        </div>
+
+        <div class="input-container blue-grey-text text-darken-3">
+          <label for="minPlayers">Mínimo numero de jugadores:</label>
+          <input  type="number" name="minPlayers" class="" ></input>
+        </div>
+
+        <div class="input-container blue-grey-text text-darken-3">
+          <label for="approxDuration">Duración estimada de la partida:</label>
+          <input  type="text" name="approxDuration" class="" placeholder="Ejemplo: 2-4 horas"></input>
+        </div>
+
+        <div class="input-container blue-grey-text text-darken-3">
+          <label for="description">Descripción o comentario (opcional):</label>
+          <input  type="textarea" name="description" class=""></input>
+        </div>
+
+        <div class="input-container blue-grey-text text-darken-3">
+          <label for="dressCode">Vestimenta (opcional):</label>
+          <input  type="textarea" name="dressCode" class="" ></input>
+        </div>
+
+        <button type="submit" class="waves-effect waves-light btn blue-grey" style= "background-color: purple; margin-top:30px;">Crear Partida</button>
+      </form>
+  </div>

@@ -1,0 +1,72 @@
+<nav class="card-panel blue-grey top-bar">
+    <div class="col s6 header-left">
+      <img src="https://res.cloudinary.com/ddsc9zpq3/image/upload/v1511453634/yellow_ytm6qm.png" alt="">
+    </div>
+    <div class="col s6 header-right">
+      <a href="/games">Guía Juegos</a>
+      <a href="">|</a>
+      <a href="/logout">Logout</a>
+    </div>
+</nav>
+<div class="background2">
+<div class="wrapper-profile">
+  <section>
+  <h1>Bienvenido <span class=" blue-grey-text text-darken-3"><%=user.username%></span></h1>
+  </section>
+
+  <section class='options-profile'>
+  <a href="/edit-your-profile/<%= user._id %>">Editar tu perfil</a>
+  <a href="">|</a>
+  <a href="/newMeeting">Crear Partida</a>
+  <a href="">|</a>
+  <a href="/search">Buscar Partida</a>
+  </section>
+
+  <section>
+
+
+    <% if (listevent == false) { %>
+    <p>No tienes ninguna partida</p>
+    <% } else {%>
+      <h2>Tus partidas:</h2>
+      <div class='partidas-wrapper'>
+      <% listevent.forEach((e) => { %>
+
+          <% if (''+e.host.host_id !== ''+user._id) {%>
+          <div class="partida-container z-depth-3">
+            <p class='game-name'><%= e.name %></p>
+            <p class='game-status'>Status: <%= e.status %></p>
+            <p class='game-players'>Numero de jugadores: <%= e.participants %>/<%= e.maxPlayers %></p>
+            <a href="/home/<%= e._id %>" class='game-details blue-grey-text text-lighten-3'>Ver detalles de la Partida</a>
+            <form action="/unjoin-game" method="post">
+              <input type="text" name="eventId" value='<%=e._id%>' style="display:none">
+              <button type="submit" class="btn blue-grey darken-2 buttonmargin">Desapuntarme de la partida</button>
+            </form>
+            </div>
+          <%}%>
+
+
+            <% if (''+e.host.host_id == ''+user._id) {%>
+              <div class="partida-container created z-depth-3">
+              <p class='game-name'><%= e.name %></p>
+              <p class='game-status'>Status: <%= e.status %></p>
+              <p class='game-players'>Numero de jugadores: <%= e.participants %>/<%= e.maxPlayers %></p>
+              <a href="/home/<%= e._id %>" class='game-details blue-grey-text text-lighten-3'>Ver detalles de la Partida</a>
+              <a href='edit/<%=e._id%>' class='game-details blue-grey-text text-lighten-3'>Editar</a>
+              <form action="/<%= e._id %>/delete" method="POST">
+                <button type="submit" class="btn blue-grey darken-2 buttonmargin">Eliminar partida</button>
+              </form>
+              </div>
+            <%}%>
+
+    <%})%>
+    </div>
+  <% } %>
+</div>
+
+  </section>
+</div>
+  <footer>
+  </footer>
+
+</div>

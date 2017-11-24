@@ -1,0 +1,66 @@
+<div class="background">
+  <img class="logo" src="https://res.cloudinary.com/ddsc9zpq3/image/upload/v1511453634/yellow_ytm6qm.png">
+
+  <div class="row">
+    <div class="col s12 center-align blue-grey-text text-lighten-4">
+      <h1 id="titre" class=" blue-grey-text  text-lighten-5 index-title">GeekMeet</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s2">
+    </div>
+    <div class="col s8 center-align amber-text text-lighten-2 index-title">
+      <p>¿Estás preparado para convertirte en un verdadero Padawan de los juegos de mesa?</p>
+    </div>
+    <div class="col s2">
+    </div>
+  </div>
+
+  <% if (user) { %>
+<a href="/logout">
+    <div class="row">
+      <div class="col s12">
+        <div class="couche1">
+          <div class="couche2">
+            <div class="couche23">
+              <div class="couche3">
+                  <span class="battle"><a href="/userProfile" class="link">Back to profile</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</a>
+
+    <% } else {%>
+      <div class="row">
+        <div class="col s3">
+        </div>
+        <div class="col s3">
+          <div class="couche1">
+            <div class="couche2">
+              <div class="couche23">
+                <div class="couche3 center-align">
+                    <span class="battle"><a href="/login" class="link">Login</a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s3">
+          <div class="couche1">
+            <div class="couche2">
+              <div class="couche23">
+                <div class="couche3 center-align">
+                    <span class="battle"><a href="/signup" class="link">Regístrate</a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s3">
+        </div>
+      </div>
+      <% }%>

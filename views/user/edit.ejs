@@ -1,0 +1,60 @@
+<div class="">
+  <div class="">
+      <form action="/edit/<%= evento._id %>" method="post">
+        <div class="">
+          <label for="name">Nombre de la partida:</label>
+          <input type="text" name="name" value="<%= evento.name %>">
+        </div>
+        <div class="">
+          <label for="game">Juego:</label>
+          <select name="game">
+            <% listgames.forEach((e) => { %>
+              <option value="<%= e.name %>"><%= e.name %></option>
+            <%})%>
+          </select>
+        </div>
+        <div class="">
+          <label for="city">Ciudad:</label>
+          <input type="text" name="city" value="<%= evento.city %>">
+        </div>
+        <div class="">
+          <label for="adress">Dirección:</label>
+          <input  type="text" name="adress" value="<%= evento.adress %>"></input>
+        </div>
+        <div class="">
+          <label for="date">Fecha:</label>
+          <input  type="datetime-local" name="date" value="<%= evento.date %>"></input>
+        </div>
+        <div class="">
+          <label for="expertiseLevel">Nivel de dificultad:</label>
+          <select name="expertiseLevel">
+              <option value="Open to anyone">Open to anyone</option>
+              <option value="+2 games played">+2 games played</option>
+              <option value="+10 games played">+10 games played</option>
+              <option value="+50 games">+50 games</option>
+          </select>
+        </div>
+        <div class="">
+          <label for="maxPlayers">Máximo número de jugadores(difernte al reglamentario):</label>
+          <input  type="number" name="maxPlayers" value="<%= evento.maxPlayers %>"></input>
+        </div>
+        <div class="">
+          <label for="minPlayers">Mínimo numero de jugadores:</label>
+          <input  type="number" name="minPlayers" class="" ></input>
+        </div>
+        <div class="">
+          <label for="approxDuration">Duración estimada de la partida:</label>
+          <input  type="text" name="approxDuration" value="<%= evento.approxDuration %>" placeholder="Ejemplo: 2-4 horas"></input>
+        </div>
+        <div class="">
+          <label for="description">Descripción o comentario (opcional):</label>
+          <input  type="textarea" name="description" value="<%= evento.description %>"></input>
+        </div>
+        <div class="">
+          <label for="dressCode">Vestimenta (opcional):</label>
+          <input  type="textarea" name="dressCode" value="<%= evento.dressCode %>" placeholder="Ejemplo: Disfraces Medievales"></input>
+        </div>
+          <button type="submit">Actualizar partida</button>
+      </form>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<nav class="card-panel blue-grey top-bar">
+  <div class="col s6 header-left">
+    <img src="https://res.cloudinary.com/ddsc9zpq3/image/upload/v1511453634/yellow_ytm6qm.png" alt="">
+  </div>
+  <div class="col s6 header-right">
+    <a href="/games">Guía Juegos</a>
+    <a href="">|</a>
+    <a href="/logout">Logout</a>
+  </div>
+</nav>
+
+<div class="background3">
+
+  <div class="blue-grey-text text-lighten-5 row">
+    <div class="col s2"></div>
+    <div class="col s8">
+      <div class="z-depth-3 mtshow center-align grey-text text-darken-4">
+    <h3>Detalles de la partida <%= gamedetails.name %></h3>
+
+    <ul class="show">
+      <li><span class=" blue-grey-text text-lighten-3">Juego</span>:
+        <%= gamedetails.game %>
+      </li>
+
+      <li><span class=" blue-grey-text text-lighten-3">Organizador</span>:
+        <%= gamedetails.host.host_name %>
+      </li>
+
+      <li><span class=" blue-grey-text text-lighten-3">Ciudad</span>:
+        <%= gamedetails.city %>
+      </li>
+      <li><span class=" blue-grey-text text-lighten-3">Direccion</span>:
+        <%= gamedetails.adress %>
+      </li>
+      <li><span class=" blue-grey-text text-lighten-3">Fecha</span>:
+        <%= gamedetails.date %>
+      </li>
+      <li><span class=" blue-grey-text text-lighten-3">Nivel de experiencia</span>:
+        <%= gamedetails.expertiseLevel %>
+      </li>
+      <li><span class=" blue-grey-text text-lighten-3">Minimo de jugadores para llevar a cabo la partida</span>:
+        <%= gamedetails.minPlayers %>
+      </li>
+      <li><span class=" blue-grey-text text-lighten-3">Duración estimada de la partida</span>:
+        <%= gamedetails.approxDuration %>
+      </li>
+      <li><span class=" blue-grey-text text-lighten-3">Descripción o información adicional</span>:
+        <%= gamedetails.description %>
+      </li>
+      <li><span class=" blue-grey-text text-lighten-3">Vestimenta</span>:
+        <%= gamedetails.dressCode %>
+      </li>
+      <ul>
+        <br><br>
+        <a href="/search" class="show game-details blue-grey-text text-lighten-2">Volver a página de búsqueda</a>
+      </div>
+    </div>
+  </div>
+  <div class="col s2"></div>
+</div>
+</div>
